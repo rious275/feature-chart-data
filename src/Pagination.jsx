@@ -35,19 +35,21 @@ const Nums = styled.div`
   list-style: none;
 
   li {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     margin-right: 10px;
 
+    border: 1px solid #3284FC;
     border-radius: 8px;
     text-align: center;
-    line-height: 1.8;
+    line-height: 1.6;
+    
+    font-size: 14px;
     font-weight: 600;
-    background-color: #3284FC;
   }
 
   a {
-    color:#fff;
+    color: #3284FC;
     text-decoration: none;
   }
 `;
