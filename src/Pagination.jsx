@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Pagination = ({ totalPosts, postsPerPage, paginate }) => {
   const pageNumbers = [];
-
+  
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
     pageNumbers.push(i);
   }
@@ -27,7 +27,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
 
-  margin-top: 20px;
+  margin-top: 14px;
 `;
 
 const Nums = styled.div`
@@ -39,12 +39,9 @@ const Nums = styled.div`
     height: 24px;
     margin-right: 10px;
 
-    border: 1px solid #3284FC;
     border-radius: 8px;
     text-align: center;
     line-height: 1.6;
-    
-    font-size: 14px;
     font-weight: 600;
   }
 

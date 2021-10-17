@@ -34,26 +34,11 @@ const App = () => {
       <div>
         <MiddleContainer>
           <Filters>
-            <Filter>
-              <input type="checkbox" />
-              <div>Gender</div>
-            </Filter>
-            <Filter>
-              <input type="checkbox" />
-              <div>Age</div>
-            </Filter>
-            <Filter>
-              <input type="checkbox" />
-              <div>Race</div>
-            </Filter>
-            <Filter>
-              <input type="checkbox" />
-              <div>Ethnicity</div>
-            </Filter>
-            <Filter>
-              <input type="checkbox" />
-              <div>Is Death</div>
-            </Filter>
+            <Filter>Gender</Filter>
+            <Filter>Age</Filter>
+            <Filter>Race</Filter>
+            <Filter>Ethnicity</Filter>
+            <Filter>Is Death</Filter>
           </Filters>
           <ViewList>
             <ViewTitle>View List</ViewTitle>
@@ -94,11 +79,20 @@ const Filters = styled.div`
   justify-content: center;
 `;
 
-const Filter = styled.div`
+const Filter = styled.button`
   display: flex;
-  margin-right: 20px;
+  margin-right: 14px;
+  padding: 8px 10px;
 
+  border-style: none;
+  border-radius: 6px;
   line-height: 1;
+  background-color: #3284FC;
+  color: #fff;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   input {
     margin-right: 6px;
