@@ -13,8 +13,6 @@ import { styles } from '../styles/styles'
 const ChartTable = ({ classes, posts }) => {
   const { root, table, headerRow } = classes;
 
-  console.log(`posts`, posts)
-
   return (
     <Paper className={root}>
       <Table className={table}>

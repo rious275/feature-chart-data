@@ -5,15 +5,6 @@ import axios from "axios";
 import ChartTable from "./component/ChartTable";
 import Pagination from "./Pagination";
 
-  // useEffect(() => {
-  //   axios.get('http://49.50.167.136:9871/api/patient/list')
-  //   .then(res => setDataList(res))
-  //   .catch(error => console.log(`error`, error))
-  // }, [])
-
-  // API 명세에 대한 이해 부족으로 최대한 유사한 형태로
-  // 목데이터 작업을 진행했습니다.
-
 const App = () => {
   const [ posts, setPosts ] = useState([]);
   const [ currentPage, setCurrentPage ] = useState(1);
@@ -24,16 +15,12 @@ const App = () => {
     .then(res => setPosts(res.data.patient.list))
   }, [])
 
-  console.log(`currentPage`, currentPage)
-
   const indexOfLast = currentPage * postsPerPage;
   const indexOfFirst = indexOfLast - postsPerPage;
 
   const currentPosts = posts.slice(indexOfFirst, indexOfLast);
 
   const paginate = pageNum => setCurrentPage(pageNum);
-
-  console.log(`posts`, posts)
 
   const handleViewList = (e) => {
     const { value } = e.target;
